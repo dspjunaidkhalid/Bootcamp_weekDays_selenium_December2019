@@ -735,6 +735,22 @@ public class    WebAPI {
         Scroll.executeScript("window.scrollBy(0,"+scroll+")");
     }
 
+    //Select From single Menu
+    public static void selectFromDropByValue(String locator1, String locator2) {
+        WebElement element = driver.findElement(By.xpath(locator1));
+        Select drpWrd = new Select(element);
+        drpWrd.selectByValue(locator2);
+    }
+
+    //Select From Multiple Menu
+    public static void selectFromMultipleDrop(String locator1, String locator2, String locator3) {
+        WebElement element = driver.findElement(By.xpath(locator1));
+        Select drpWrd = new Select(element);
+        drpWrd.selectByValue(locator2);
+        drpWrd.selectByValue(locator3);
+    }
+
+
 
 
 }
